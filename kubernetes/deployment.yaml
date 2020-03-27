@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atmail-rbl-deployment
+  labels:
+    app: atmail-rbl
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: atmail-rbl
+  template:
+    metadata:
+      labels:
+        app: atmail-rbl
+        lastupdate: "1553658806"
+    spec:
+      containers:
+        - name: atmail-rbl-container
+          image: gcr.io/aiagent/atmail-rbl:latest
+          imagePullPolicy: Always
+          env:
+            - name: API_PORT
+              value: "8001"
+            - name: RBL_DNS_LOOKUP
+              value: "zen.spamhaus.org,bl.score.senderscore.com,b.barracudacentral.org,bl.spamcop.net"
+          ports:
+            - containerPort: 8001

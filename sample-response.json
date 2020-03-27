@@ -1,0 +1,17 @@
+[{
+    "RblServer": "zen.spamhaus.org",
+    "IsMatch": false,
+    "IPs": null
+}, {
+    "RblServer": "bl.score.senderscore.com",
+    "IsMatch": true,
+    "IPs": ["127.0.0.2"]
+}, {
+    "RblServer": "b.barracudacentral.org",
+    "IsMatch": true,
+    "IPs": ["127.0.0.2"]
+}, {
+    "RblServer": "bl.spamcop.net",
+    "IsMatch": true,
+    "IPs": ["127.0.0.2"]
+}]
