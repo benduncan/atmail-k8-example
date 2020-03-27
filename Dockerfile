@@ -18,7 +18,7 @@ RUN apk del build-base git
 # Next, just copy the golang binary, create a lightweight environment
 
 FROM alpine
-WORKDIR /workspace/apod-backend-api
+WORKDIR /workspace/atmail-rbl/
 RUN apk add ca-certificates
 
 COPY --from=build-env /workspace/atmail-rbl/bin/ /workspace/atmail-rbl/bin/
