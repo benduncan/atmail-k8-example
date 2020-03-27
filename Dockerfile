@@ -21,7 +21,6 @@ FROM alpine
 WORKDIR /workspace/apod-backend-api
 RUN apk add ca-certificates
 
-#COPY --from=build-env /workspace/apod-backend/ssl /workspace/apod-backend-api/ssl
 COPY --from=build-env /workspace/atmail-rbl/bin/ /workspace/atmail-rbl/bin/
 
 EXPOSE $API_PORT
